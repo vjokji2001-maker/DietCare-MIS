@@ -192,7 +192,7 @@ function App() {
       const result = await syncApplicationDataFromBackend();
       if (!result.synced && active) {
         setStartupError(
-          "Server data could not be loaded. Check the API connection and refresh to try again.",
+          "Server data could not be loaded. Open DietCare again from SmartCare to refresh your session. If this continues, check the API response and clinic/user details.",
         );
       } else if (active) {
         const notices = [];
@@ -232,8 +232,8 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      {/* {startupError && (
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/+$/, "") || "/"}>
+      {startupError && (
         <div
           role="alert"
           style={{
@@ -246,7 +246,7 @@ function App() {
         >
           {startupError}
         </div>
-      )} */}
+      )}
       <Suspense
         fallback={
           <div className="app-boot">
@@ -352,6 +352,6 @@ function App() {
       </Suspense>
     </BrowserRouter>
   );
-}
+}                                                                                                                                                                         
 
-export default App;
+export default App;                                                               

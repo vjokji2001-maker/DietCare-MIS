@@ -429,7 +429,7 @@ export default function DietaryOperationsDashboard() {
             noPadding={true}
             actions={
               <a
-                href="/patients"
+                href={`${import.meta.env.BASE_URL}patients`}
                 style={{
                   display: "inline-flex",
                   alignItems: "center",

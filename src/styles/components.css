@@ -215,7 +215,7 @@
   min-height: 560px;
   background:
     linear-gradient(180deg, rgba(2, 119, 189, 0.4), rgba(1, 87, 155, 0.8)),
-    url("/images/dietcare-login-food-only.jpg") center / cover;
+    url("../../public/images/dietcare-login-food-only.jpg") center / cover;
   color: var(--text-inverse);
   padding: var(--space-8);
 }
